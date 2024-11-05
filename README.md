@@ -7,7 +7,7 @@ Penyakit Parkinson merupakan penyakit gangguan otak yang menyebabkan gerakan yan
 > ## Business Understanding
 
 ### Problem Statements
-Permasalahan pada proyek ini adalah bagaimana merancang sistem deteksi penyakit Parkinson secara dini ?
+Permasalahan pada proyek ini adalah bagaimana merancang sistem deteksi penyakit Parkinson secara dini.
 
 ### Goals
 Berdasarkan pernyataan permasalahan di atas, pada proyek ini akan dirancang sistem deteksi penyakit Parkinson secara dini menggunakan machine learning.
@@ -52,10 +52,16 @@ Variabel-variabel tersebut secara umum merupakan:
 - Fitur akustik seperti MDVP, jitter, shimmer, dan rasio noise.
 - Metrik analisis suara dinamis nonlinier seperti RPDE dan DFA.
 
-Berikut informasi mengenai jumlah data ,tipe data dan informasi data hilang (***missing value***) yang terdapat pada dataset ini:
+Informasi mengenai jumlah data dan tipe data yang terdapat pada dataset ini ditampilkan pada gambar berikut:
 <p align="center">
   <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/df-info.JPG?raw=true"/>
 </p>
+
+Sedangkan pairplot masing-masing variabel ditampilkan pada gambar berikut:
+<p align="center">
+  <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/pairplot.png?raw=true"/>
+</p>
+
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 Untuk memahami data, dilakukan exploratory data analysis, antara lain:
