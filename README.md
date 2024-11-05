@@ -17,7 +17,7 @@ Permasalahan pada proyek ini adalah bagaimana merancang sistem deteksi penyakit 
     - Pada proyek ini dirancang model machine learning dengan ANN yg memiliki lapisan tersembunyi lebih sedikit dan deep learning dengan optimizer.
     - Metrik evaluasi kedua model machine learning akan dibandingkan.
 
-## Data Understanding
+> ## Data Understanding
 Dataset yang digunakan: [Parkinson's Disease](https://www.kaggle.com/datasets/shreyadutta1116/parkinsons-disease/data).
 
 Berikut penjelasan mengenai variabel-variabel pada kolom dataset:
@@ -63,7 +63,7 @@ Untuk memahami data, dilakukan exploratory data analysis, antara lain:
 - Membaca file dataset
 - Menampilkan 5 baris pertama dari dataset
 
-## Data Preparation
+> ## Data Preparation
 Teknik data preparation yang dilakukan:
 1. Dropping kolom pertama dari dataset yang bernama "name"
 2. Menghitung nilai cross-correlasi
@@ -75,7 +75,7 @@ Teknik data preparation yang dilakukan:
 - Menjelaskan proses data preparation yang dilakukan
 - Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
 
-## Modeling
+> ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
 
 **Rubrik/Kriteria Tambahan (Opsional)**: 
@@ -83,7 +83,7 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
 - Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. **Jelaskan proses improvement yang dilakukan**.
 - Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**.
 
-## Evaluation
+> ## Evaluation
 Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
 
 Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
@@ -92,12 +92,5 @@ Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, 
 
 Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
 
-**---Ini adalah bagian akhir laporan---**
-
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
 
