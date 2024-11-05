@@ -1,4 +1,3 @@
-# Parkinson's Disease
 # Laporan Proyek Machine Learning - Nazrul Effendy
 
 > ## Domain Proyek - Parkinson's Disease
@@ -11,7 +10,7 @@ Penyakit Parkinson merupakan penyakit gangguan otak yang menyebabkan gerakan yan
 Permasalahan pada proyek ini adalah bagaimana merancang sistem deteksi penyakit Parkinson secara dini ?
 
 ### Goals
-- Merancang sistem deteksi penyakit Parkinson secara dini
+Berdasarkan pernyataan permasalahan di atas, pada proyek ini akan dirancang sistem deteksi penyakit Parkinson secara dini menggunakan machine learning.
 
 ### Solution statements
     - Pada proyek ini dirancang model machine learning dengan ANN yg memiliki lapisan tersembunyi lebih sedikit dan deep learning dengan optimizer.
