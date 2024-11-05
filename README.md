@@ -13,8 +13,8 @@ Permasalahan pada proyek ini adalah bagaimana merancang sistem deteksi penyakit 
 Berdasarkan pernyataan permasalahan di atas, pada proyek ini akan dirancang sistem deteksi penyakit Parkinson secara dini menggunakan machine learning.
 
 ### Solution statements
-    - Pada proyek ini dirancang model machine learning dengan ANN yg memiliki lapisan tersembunyi lebih sedikit dan deep learning dengan optimizer.
-    - Metrik evaluasi kedua model machine learning akan dibandingkan.
+Pada proyek ini dirancang model machine learning menggunakan linear regression, K-Nearest Neighbor dan Deep Learning.
+Metrik evaluasi ketiga model machine learning akan dibandingkan.
 
 > ## Data Understanding
 Dataset yang digunakan: [Parkinson's Disease](https://www.kaggle.com/datasets/shreyadutta1116/parkinsons-disease/data).
