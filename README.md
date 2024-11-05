@@ -1,15 +1,14 @@
-# Parkinson-s-Disease
+# Parkinson's Disease
 # Laporan Proyek Machine Learning - Nazrul Effendy
 
-## Domain Proyek - Parkinson's Disease
+> ## Domain Proyek - Parkinson's Disease
 
-{Pada bagian ini, kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.}
-Penyakit Parkinson merupakan penyakit gangguan otak yang menyebabkan gerakan yang tidak diinginkan atau tidak terkendali, seperti gemetar, kaku, dan kesulitan menjaga keseimbangan dan koordinasi. Gejala ini biasanya muncul secara bertahap dan memburuk seiring waktu. Seiring perkembangan penyakit, penderita dapat mengalami kesulitan berjalan dan berbicara. Mereka juga mungkin mengalami perubahan mental dan perilaku, masalah tidur, depresi, kesulitan mengingat, dan kelelahan. Deteksi penyakit ini secara dini diperlukan sehingga pasien dapat diterapi sedini mungkin. [Parkinson’s Disease: Causes, Symptoms, and Treatments](https://www.nia.nih.gov/health/parkinsons-disease/parkinsons-disease-causes-symptoms-and-treatments) 
+Penyakit Parkinson merupakan penyakit gangguan otak yang menyebabkan gerakan yang tidak diinginkan atau tidak terkendali, seperti gemetar, kaku, dan kesulitan menjaga keseimbangan dan koordinasi. Gejala ini biasanya muncul secara bertahap dan memburuk seiring waktu. Seiring perkembangan penyakit, penderita dapat mengalami kesulitan berjalan dan berbicara. Mereka juga mungkin mengalami perubahan mental dan perilaku, masalah tidur, depresi, kesulitan mengingat, dan kelelahan. Deteksi penyakit ini secara dini diperlukan sehingga pasien dapat diterapi sedini mungkin. [National Institute on Aging](https://www.nia.nih.gov/health/parkinsons-disease/parkinsons-disease-causes-symptoms-and-treatments) 
 
-## Business Understanding
+> ## Business Understanding
 
 ### Problem Statements
-- Permasalahan pada proyek ini adalah bagaimana merancang sistem deteksi penyakit Parkinson secara dini ?
+Permasalahan pada proyek ini adalah bagaimana merancang sistem deteksi penyakit Parkinson secara dini ?
 
 ### Goals
 - Merancang sistem deteksi penyakit Parkinson secara dini
