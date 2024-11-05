@@ -56,7 +56,7 @@ Variabel-variabel tersebut secara umum merupakan:
 
 Berikut informasi mengenai jumlah data ,tipe data dan informasi data hilang (***missing value***) yang terdapat pada dataset ini:
 <p align="center">
-  <img src="https://github.com/adiputrasinaga-cmd/Predictive-Analytics/blob/main/img/collegeGPA-rev.png?raw=true"/>
+  <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/df-info.JPG?raw=true"/>
 </p>
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
