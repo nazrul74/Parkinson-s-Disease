@@ -20,7 +20,7 @@ Pada proyek ini dirancang model machine learning menggunakan linear regression, 
 Metrik evaluasi ketiga model machine learning akan dibandingkan.
 
 > ## Data Understanding
-Dataset yang digunakan: [Parkinson's Disease](https://www.kaggle.com/datasets/shreyadutta1116/parkinsons-disease/data).
+Dataset yang digunakan berasal dari kaggle di link [Parkinson's Disease](https://www.kaggle.com/datasets/shreyadutta1116/parkinsons-disease/data).
 
 Berikut penjelasan mengenai variabel-variabel pada kolom dataset:
 | Variabel | Deskripsi |
