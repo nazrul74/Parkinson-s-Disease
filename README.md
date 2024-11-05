@@ -9,7 +9,7 @@ Penyakit Parkinson merupakan penyakit gangguan otak yang menyebabkan gerakan yan
 ## Business Understanding
 
 ### Problem Statements
-- Bagaimana merancang sistem deteksi penyakit Parkinson secara dini ?
+- Permasalahan pada proyek ini adalah bagaimana merancang sistem deteksi penyakit Parkinson secara dini ?
 
 ### Goals
 - Merancang sistem deteksi penyakit Parkinson secara dini
