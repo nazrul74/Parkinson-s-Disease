@@ -73,7 +73,7 @@ Untuk memahami data, dilakukan exploratory data analysis, antara lain:
 
 Hasil cross correlation masing-masing variabel ditampilkan pada gambar berikut:
 <p align="center">
-  <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/cross.png?raw=true"/>
+  <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/corr.png?raw=true"/>
 </p>
 
 > ## Data Preparation
