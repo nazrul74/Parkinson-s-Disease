@@ -60,21 +60,10 @@ Informasi mengenai jumlah data dan tipe data yang terdapat pada dataset ini dita
   <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/df-info.JPG?raw=true"/>
 </p>
 
-Informasi data hilang (***missing value***) yang terdapat pada dataset ini ditampilkan pada gambar berikut.
-<p align="center">
-  <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/df-isnull.JPG?raw=true"/>
-</p>
-
 Gambar tersebut menunjukkan bahwa tidak ada data hilang di dataset yang digunakan. Sedangkan pairplot masing-masing variabel ditampilkan pada gambar berikut:
 <p align="center">
   <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/pairplot.png?raw=true"/>
 </p>
-
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-Untuk memahami data, dilakukan exploratory data analysis, antara lain:
-- Membaca file dataset
-- Menampilkan 5 baris pertama dari dataset
 
 Hasil cross correlation masing-masing variabel ditampilkan pada gambar berikut:
 <p align="center">
@@ -88,6 +77,11 @@ Teknik data preparation yang dilakukan:
 3. 
 4. 
 5. . Teknik yang digunakan pada notebook dan laporan harus berurutan.
+
+Informasi data hilang (***missing value***) yang terdapat pada dataset ini ditampilkan pada gambar berikut.
+<p align="center">
+  <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/df-isnull.JPG?raw=true"/>
+</p>
 
 **Rubrik/Kriteria Tambahan (Opsional)**: 
 - Menjelaskan proses data preparation yang dilakukan
