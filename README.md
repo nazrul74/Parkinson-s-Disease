@@ -70,7 +70,7 @@ Hasil cross correlation masing-masing variabel ditampilkan pada gambar berikut:
 > ## Data Preparation
 Teknik data preparation yang dilakukan:
 1. Variabel status diedit sehingga jika nilainya lebih besar dari 0,7 diubah menjadi 1. Jika kurang atau sama dengan 0,7 diubah menjadi 0.
-2. Menghitung jumlah data hilang
+2. Menghitung jumlah data hilang. Jumlah data hilang ini perlu diketahui untuk kemudian dapat dilakukan preparation tertentu pada data tersebut, misalkan menghapus baris data tersebut.
 3. Dropping kolom pertama dari dataset yang bernama "name"
 4. Variabel input machine learning distandarisasi
 
@@ -79,10 +79,6 @@ Informasi data hilang (***missing value***) yang terdapat pada dataset ini ditam
 <p align="center">
   <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/df-isnull.JPG?raw=true"/>
 </p>
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
 
 > ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
