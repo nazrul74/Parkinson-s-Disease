@@ -4,9 +4,6 @@
 
 Penyakit Parkinson merupakan penyakit gangguan otak yang menyebabkan gerakan yang tidak diinginkan atau tidak terkendali, seperti gemetar, kaku, dan kesulitan menjaga keseimbangan dan koordinasi. Gejala ini biasanya muncul secara bertahap dan memburuk seiring waktu. Seiring perkembangan penyakit, penderita dapat mengalami kesulitan berjalan dan berbicara. Mereka juga mungkin mengalami perubahan mental dan perilaku, masalah tidur, depresi, kesulitan mengingat, dan kelelahan. Deteksi penyakit ini secara dini diperlukan sehingga pasien dapat diterapi sedini mungkin. [Parkinson’s Disease: Causes, Symptoms, and Treatments](https://www.nia.nih.gov/health/parkinsons-disease/parkinsons-disease-causes-symptoms-and-treatments);[Fan dkk, 2024](https://www.sciencedirect.com/science/article/pii/S1353802024011945); [Jeong dkk, 2024](https://www.sciencedirect.com/science/article/pii/S0010482524011636);[Dennis and Strafella, 2024](https://www.sciencedirect.com/science/article/pii/S1353802024009982)
 
-
-
-
 > ## Business Understanding
 
 ### Problem Statements
@@ -72,11 +69,11 @@ Hasil cross correlation masing-masing variabel ditampilkan pada gambar berikut:
 
 > ## Data Preparation
 Teknik data preparation yang dilakukan:
-1. Dropping kolom pertama dari dataset yang bernama "name"
-2. Menghitung nilai cross-correlasi
-3. 
-4. 
-5. . Teknik yang digunakan pada notebook dan laporan harus berurutan.
+1. Variabel status diedit sehingga jika nilainya lebih besar dari 0,7 diubah menjadi 1. Jika kurang atau sama dengan 0,7 diubah menjadi 0.
+2. Menghitung jumlah data hilang
+3. Dropping kolom pertama dari dataset yang bernama "name"
+4. Variabel input machine learning distandarisasi
+
 
 Informasi data hilang (***missing value***) yang terdapat pada dataset ini ditampilkan pada gambar berikut.
 <p align="center">
