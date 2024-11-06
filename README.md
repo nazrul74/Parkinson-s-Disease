@@ -60,12 +60,12 @@ Informasi mengenai jumlah data dan tipe data yang terdapat pada dataset ini dita
   <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/df-info.JPG?raw=true"/>
 </p>
 
-Informasi data hilang (***missing value***) yang terdapat pada dataset ini ditampilkan pada gambar berikut:
+Informasi data hilang (***missing value***) yang terdapat pada dataset ini ditampilkan pada gambar berikut.
 <p align="center">
   <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/df-isnull.JPG?raw=true"/>
 </p>
 
-Sedangkan pairplot masing-masing variabel ditampilkan pada gambar berikut:
+Gambar tersebut menunjukkan bahwa tidak ada data hilang di dataset yang digunakan. Sedangkan pairplot masing-masing variabel ditampilkan pada gambar berikut:
 <p align="center">
   <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/pairplot.png?raw=true"/>
 </p>
