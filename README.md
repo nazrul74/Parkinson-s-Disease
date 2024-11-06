@@ -13,7 +13,7 @@ Permasalahan pada proyek ini adalah bagaimana merancang sistem deteksi penyakit 
 Berdasarkan pernyataan permasalahan di atas, pada proyek ini akan dirancang sistem deteksi penyakit Parkinson secara dini menggunakan machine learning.
 
 ### Solution statements
-Pada proyek ini dirancang model machine learning menggunakan linear regression, K-Nearest Neighbor dan Deep Learning.
+Pada proyek ini dirancang model machine learning menggunakan logistic regression, K-Nearest Neighbor dan Deep Learning.
 Metrik evaluasi ketiga model machine learning akan dibandingkan.
 
 > ## Data Understanding
@@ -69,10 +69,11 @@ Hasil cross correlation masing-masing variabel ditampilkan pada gambar berikut:
 
 > ## Data Preparation
 Teknik data preparation yang dilakukan:
-1. Variabel status diedit sehingga jika nilainya lebih besar dari 0,7 diubah menjadi 1. Jika kurang atau sama dengan 0,7 diubah menjadi 0.
-2. Menghitung jumlah data hilang. Jumlah data hilang ini perlu diketahui untuk kemudian dapat dilakukan preparation tertentu pada data tersebut, misalkan menghapus baris data tersebut.
-3. Dropping kolom pertama dari dataset yang bernama "name"
-4. Variabel input machine learning distandarisasi
+1. Dropping kolom pertama dari dataset yang bernama "name". Variabel name ini dianggap tidak diperlukan sebagai variabel input untuk memprediksi status penyakit Parkinson tersebut.
+2. Variabel 'status" diedit sehingga jika nilainya lebih besar dari 0,7 diubah menjadi 1. Jika kurang atau sama dengan 0,7 diubah menjadi 0. Konversi angka ini untuk memastikan mana yang terindikasi memiliki penyakit Parkinson, dan mana yang tidak.
+3. Menghitung jumlah data hilang. Jumlah data hilang ini perlu diketahui untuk kemudian dapat dilakukan preparation tertentu pada data tersebut, misalkan menghapus baris data tersebut.
+4. Membuat data variabel input yang merupakan data asli dikurangin variabel 'status', sedangkan variabel 'status' menjadi variabel output. Hal ini dilakukan untuk memastikan mana variabel yang akan menjadi input maupun output baik untuk pelatihan maupun untuk evaluasi model machine learning.
+5. Variabel input machine learning distandarisasi. Standarisasi ini dilakukan agar nilai maksimum dan minimum dari variabel-variabel yang digunakan tidak terlalu beda besarnya. 
 
 
 Informasi data hilang (***missing value***) yang terdapat pada dataset ini ditampilkan pada gambar berikut.
@@ -81,7 +82,9 @@ Informasi data hilang (***missing value***) yang terdapat pada dataset ini ditam
 </p>
 
 > ## Modeling
-Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
+{Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.}
+
+Pada proyek ini digunakan tiga jenis machine learning, yaitu logistic regression, K-Nearest Neighbor dan Deep Learning.
 
 **Rubrik/Kriteria Tambahan (Opsional)**: 
 - Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
