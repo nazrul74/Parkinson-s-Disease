@@ -14,7 +14,7 @@ Berdasarkan pernyataan permasalahan di atas, pada proyek ini akan dirancang sist
 
 ### Solution statements
 Pada proyek ini dirancang model machine learning menggunakan logistic regression, K-Nearest Neighbor dan Deep Learning.
-Metrik evaluasi ketiga model machine learning akan dibandingkan.
+Akurasi ketiga model machine learning akan dibandingkan.
 
 > ## Data Understanding
 Dataset yang digunakan berasal dari kaggle di link [Parkinson's Disease](https://www.kaggle.com/datasets/shreyadutta1116/parkinsons-disease/data).
@@ -52,12 +52,17 @@ Variabel-variabel tersebut secara umum merupakan:
 - Fitur akustik seperti MDVP, jitter, shimmer, dan rasio noise.
 - Metrik analisis suara dinamis nonlinier seperti RPDE dan DFA.
 
-Informasi mengenai jumlah data dan tipe data yang terdapat pada dataset ini ditampilkan pada gambar berikut:
+Informasi mengenai jumlah data dan tipe data yang terdapat pada dataset ini ditampilkan pada gambar berikut. Dari coding yang dijalankan, diperoleh bahwa **dataset** yang digunakan **terdiri dari 1195 baris** dan 24 kolom.
 <p align="center">
   <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/df-info.JPG?raw=true"/>
 </p>
 
-Gambar tersebut menunjukkan bahwa tidak ada data hilang di dataset yang digunakan. Sedangkan pairplot masing-masing variabel ditampilkan pada gambar berikut:
+Menggunakan coding 'describe' diperoleh nilai statistik dari dataset tersebut, antara lain berupa jumlah data, rerata, standard deviasi, nilai minimal, 25%, 50%, 75% dan nilai maksimum masing-masing variabel. Gambar berikut memperlihatkan tampilan sebagian dari hasil coding tersebut.
+<p align="center">
+  <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/df-describe.JPG?raw=true"/>
+</p>
+
+Sedangkan pairplot masing-masing variabel ditampilkan pada gambar berikut:
 <p align="center">
   <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/pairplot.png?raw=true"/>
 </p>
@@ -66,6 +71,8 @@ Hasil cross correlation masing-masing variabel ditampilkan pada gambar berikut:
 <p align="center">
   <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/corr.png?raw=true"/>
 </p>
+
+
 
 > ## Data Preparation
 Teknik data preparation yang dilakukan:
@@ -76,14 +83,14 @@ Teknik data preparation yang dilakukan:
 5. Variabel input machine learning distandarisasi. Standarisasi ini dilakukan agar nilai maksimum dan minimum dari variabel-variabel yang digunakan tidak terlalu beda besarnya. 
 
 
-Informasi data hilang (***missing value***) yang terdapat pada dataset ini ditampilkan pada gambar berikut.
+Informasi data hilang (***missing value***) yang terdapat pada dataset ini ditampilkan pada gambar berikut. 
 <p align="center">
   <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/df-isnull.JPG?raw=true"/>
 </p>
 
-> ## Modeling
-{Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.}
+Gambar tersebut menunjukkan bahwa tidak ada data hilang di dataset yang digunakan. 
 
+> ## Modeling
 Pada proyek ini digunakan tiga jenis machine learning, yaitu logistic regression, K-Nearest Neighbor dan Deep Learning.
 
 **Rubrik/Kriteria Tambahan (Opsional)**: 
