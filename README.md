@@ -7,10 +7,10 @@ Penyakit Parkinson merupakan penyakit gangguan otak yang menyebabkan gerakan yan
 > ## Business Understanding
 
 ### Problem Statements
-Permasalahan pada proyek ini adalah bagaimana merancang sistem prediksi penyakit Parkinson secara dini.
+Permasalahan pada proyek ini adalah bagaimana merancang sistem deteksi penyakit Parkinson secara dini menggunakan biomarker vokal.
 
 ### Goals
-Berdasarkan pernyataan permasalahan di atas, pada proyek ini akan dirancang sistem prediksi penyakit Parkinson secara dini menggunakan machine learning.
+Berdasarkan pernyataan permasalahan di atas, pada proyek ini akan dirancang sistem deteksi penyakit Parkinson secara dini menggunakan machine learning dan variabel input berupa biomarker vokal.
 
 ### Solution statements
 Pada proyek ini dirancang model machine learning menggunakan logistic regression, K-Nearest Neighbor dan Deep Learning.
