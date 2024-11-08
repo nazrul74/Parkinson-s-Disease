@@ -93,10 +93,54 @@ Gambar tersebut menunjukkan bahwa tidak ada data hilang di dataset yang digunaka
 > ## Modeling
 Pada proyek ini digunakan tiga jenis machine learning, yaitu logistic regression, K-Nearest Neighbor dan Deep Learning.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-- Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. **Jelaskan proses improvement yang dilakukan**.
-- Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**.
+- Pemisahan data training dan data pengujian:
+
+```
+X_train,X_test,y_train,y_test = train_test_split(X_scalled,y,test_size=0.3,random_state=1)
+```
+
+- Model prediksi dengan algoritma logistic regression:
+
+```
+from sklearn.linear_model import LogisticRegression
+lr = LogisticRegression(penalty = 'l2')
+lr.fit(X_train,y_train)
+y_pred = lr.predict(X_test)
+```
+
+- Model prediksi dengan algoritma KNN:
+
+```
+from sklearn.neighbors import KNeighborsClassifier
+model2 = KNeighborsClassifier(n_neighbors=3)
+model2.fit(X_train,y_train)
+y_pred = model2.predict(X_test)
+```
+
+- Model prediksi dengan algoritma Deep Learning:
+
+```
+import tensorflow
+from tensorflow import keras
+from keras.models import Sequential
+from keras.layers import Dense,Dropout
+from keras.callbacks import EarlyStopping
+
+model3 = Sequential()
+model3.add(Dense(128,activation = 'relu',input_dim =(22) ))
+model3.add(Dropout(0.2))
+model3.add(Dense(64,activation='relu'))
+model3.add(Dropout(0.2))
+model3.add(Dense(1,activation='sigmoid'))
+model3.summary()
+
+model3.compile(loss='binary_crossentropy',optimizer='adam',metrics=['accuracy'])
+early_stopping = EarlyStopping(monitor='val_loss',
+                               patience=5,
+                               restore_best_weights=True)
+history = model3.fit(X_train,y_train,validation_data=(X_test,y_test),batch_size=32,epochs=100,verbose=True,callbacks=[early_stopping])
+y_pred = model3.predict(X_test)
+```
 
 > ## Evaluation
 Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
