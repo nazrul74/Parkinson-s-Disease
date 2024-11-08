@@ -143,13 +143,18 @@ y_pred = model3.predict(X_test)
 ```
 
 > ## Evaluation
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
+Pada proyek ini, digunakan nilai akurasi untuk membandingkan unjuk kerja ketiga model machine learning yang digunakan. Pada proyek ini, ditampilkan juga nilai loss training maupun validasi dari model deep learning seperti pada gambar berikut.
 
-Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
-- Penjelasan mengenai metrik yang digunakan
-- Menjelaskan hasil proyek berdasarkan metrik evaluasi
+<p align="center">
+  <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/loss-dl.png?raw=true"/>
+</p>
 
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
+Dari hasil experiment pada proyek ini, diperoleh bahwa deep learning berhasil mencapat nilai akurasi tertinggi yaitu sebesar 93,59%, diikuti oleh KNN dan logistic regression, masing-masing sebesar 92,20% dan 91,36% seperti yang ditunjukkan pada tabel berikut.
 
+| No | Model | Akurasi (%) |
+| --- | --- | --- |
+| 1 | logistic regression | 91,36 |
+| 2 | KNN | 92,20 |
+| 3 | deep learning | 93,59 |
 
 
