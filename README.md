@@ -143,7 +143,7 @@ y_pred = model3.predict(X_test)
 ```
 
 > ## Evaluation
-Pada proyek ini, digunakan nilai akurasi untuk membandingkan unjuk kerja ketiga model machine learning yang digunakan. Pada proyek ini, ditampilkan juga nilai loss training maupun validasi dari model deep learning seperti pada gambar berikut.
+Pada proyek ini, digunakan nilai akurasi untuk membandingkan unjuk kerja ketiga model machine learning yang digunakan. Pada proyek ini, ditampilkan juga nilai loss training maupun validasi dari model deep learning seperti pada gambar berikut. Gambar tersebut memperlihatkan bahwa training model deep learning telah berjalan dengan baik.
 
 <p align="center">
   <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/loss-dl.png?raw=true"/>
