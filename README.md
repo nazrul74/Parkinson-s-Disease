@@ -4,6 +4,12 @@
 
 Penyakit Parkinson merupakan penyakit gangguan otak yang menyebabkan gerakan yang tidak diinginkan atau tidak terkendali, seperti gemetar, kaku, dan kesulitan menjaga keseimbangan dan koordinasi. Gejala ini biasanya muncul secara bertahap dan memburuk seiring waktu. Seiring perkembangan penyakit, penderita dapat mengalami kesulitan berjalan dan berbicara. Mereka juga mungkin mengalami perubahan mental dan perilaku, masalah tidur, depresi, kesulitan mengingat, dan kelelahan. Deteksi penyakit ini secara dini diperlukan sehingga pasien dapat diterapi sedini mungkin. [Parkinson’s Disease: Causes, Symptoms, and Treatments](https://www.nia.nih.gov/health/parkinsons-disease/parkinsons-disease-causes-symptoms-and-treatments);[Fan dkk, 2024](https://www.sciencedirect.com/science/article/pii/S1353802024011945); [Jeong dkk, 2024](https://www.sciencedirect.com/science/article/pii/S0010482524011636);[Dennis and Strafella, 2024](https://www.sciencedirect.com/science/article/pii/S1353802024009982)
 
+**Referensi:**
+1. Dennis, Anthaea-Grace Patricia, and Antonio P. Strafella. 2024. “The Role of AI and Machine Learning in the Diagnosis of Parkinson’s Disease and Atypical Parkinsonisms.” Parkinsonism & Related Disorders 126 (September):106986. https://doi.org/10.1016/j.parkreldis.2024.106986.
+2. Fan, Hongyang, Sai Li, Xin Guo, Min Chen, Honggao Zhang, and Yingzhu Chen. 2024. “Development and Validation of a Machine Learning-Based Diagnostic Model for Parkinson’s Disease in Community-Dwelling Populations: Evidence from the China Health and Retirement Longitudinal Study (CHARLS).” Parkinsonism & Related Disorders, October, 107182. https://doi.org/10.1016/j.parkreldis.2024.107182.
+3. Jeong, Seung-Min, Young-Do Song, Chae-Lin Seok, Jun-Young Lee, Eui Chul Lee, and Han-Joon Kim. 2024. “Machine Learning-Based Classification of Parkinson’s Disease Using Acoustic Features: Insights from Multilingual Speech Tasks.” Computers in Biology and Medicine 182 (November):109078. https://doi.org/10.1016/j.compbiomed.2024.109078.
+4. “Parkinson’s Disease: Causes, Symptoms, and Treatments.” 2022. National Institute on Aging. April 14, 2022. https://www.nia.nih.gov/health/parkinsons-disease/parkinsons-disease-causes-symptoms-and-treatments.
+
 > ## Business Understanding
 
 ### Problem Statements
