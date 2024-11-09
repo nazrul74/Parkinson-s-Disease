@@ -12,36 +12,57 @@ Original file is located at
 - **ID Dicoding:** nazrul_effendy
 
 - Dataset: https://www.kaggle.com/datasets/shreyadutta1116/parkinsons-disease/data
+
+### Import library-library yang diperlukan:
 """
 
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 
+"""### Mounting ke google drive"""
+
 from google.colab import drive
 drive.mount('/content/gdrive')
 
-import warnings
-warnings.filterwarnings("ignore" ,category=FutureWarning)
+"""### Download data dari kaggle"""
 
 !kaggle datasets download -d shreyadutta1116/parkinsons-disease
 
+"""### Unzip data parkinsons-disease.zip"""
+
 !unzip parkinsons-disease.zip
 
-"""## Data Understanding"""
+"""## Data Understanding
+
+### Memuat Dataset Parkinson's Disease dataset.csv pada variabel "df"
+"""
 
 df=pd.read_csv("dataset.csv")
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 
+"""### Menampilkan 5 baris pertama dari df:"""
+
 df.head()
+
+"""### Menampilkan tipe data setiap kolom pada dataset "df":
+
+"""
 
 df.info()
 
+"""# Melihat ukuran dataset:"""
+
 df.shape
 
-"""Dari coding ini, diperoleh bahwa data yang didownload dari kaggle tersebut memiliki 24 kolom dan 1195 baris"""
+"""Dari coding ini, diperoleh bahwa data yang didownload dari kaggle tersebut memiliki 24 kolom dan 1195 baris
+
+### Melihat statistik dataset:
+"""
 
 df.describe()
+
+"""### Menampilkan heatmap hasil cross corelation dari variabel-variabel pada dataset:"""
 
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -49,14 +70,23 @@ corrmat = df.corr()
 f, ax = plt.subplots(figsize=(10, 10))
 sns.heatmap(corrmat, vmax= 1, square=True);
 
+"""### Menampirkan pairplot dari variabel-variabel dataset:"""
+
 import seaborn as sns
 sns.pairplot(df)
 
-"""## Data Preparation"""
+"""## Data Preparation
+
+### Menghilangkan kolom bernama 'name':
+"""
 
 df.drop('name',axis = 1,inplace = True)
 
+"""### Mengubah nilai 'status' menjadi 1 jika lebih dari 0,7, dan menjadi nol jika sebaliknya:"""
+
 df.status = np.where(df.status>0.7,1,0)
+
+"""### Menampilkan 100 baris dari dataset (hasil pengolahan di atas) secara acak:"""
 
 df.sample(100)
 
@@ -68,42 +98,63 @@ df.sample(100)
 
 df.isnull().sum()
 
+"""### Membagi data menjadi masukan dan keluaran. Data keluaran merupakan nilai variabel 'status', sedangkan variabel selain 'status' menjadi masukan:"""
+
 X = df.drop('status',axis =1).values
 y = df.status.values
 
 X
 
-"""### Standarisasi variabel"""
+"""### Standarisasi variabel
+
+### Memanggil library-library yang diperlukan:
+"""
 
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
+"""### Standarisasi nilai variabel masukan"""
+
 sc = StandardScaler()
 X_scalled = sc.fit_transform(X)
 
+"""### Cek nilai variabel masukan yang sudah distandarisasi:"""
+
 X_scalled
 
-"""## Modeling
-
-### Pemisahan antara data pelatihan dan data pengujian
-"""
+"""### Pemisahan antara data pelatihan dan data pengujian"""
 
 X_train,X_test,y_train,y_test = train_test_split(X_scalled,y,test_size=0.3,random_state=1)
 
+"""## Modeling
+
+# Memanggil library yang diperlukan:
+"""
+
 from sklearn.metrics import accuracy_score
 
-"""### Logistic Regression"""
+"""### Logistic Regression
+
+# Memanggil library yang dibutuhkan, membuat dan melatih model logistic regression:
+"""
 
 from sklearn.linear_model import LogisticRegression
 lr = LogisticRegression(penalty = 'l2')
 lr.fit(X_train,y_train)
 
+"""### Menguji model logistic regression:"""
+
 y_pred = lr.predict(X_test)
+
+"""### Menghitung akurasi model logistic regression:"""
 
 Akurasi_LR=accuracy_score(y_test,y_pred)
 print(Akurasi_LR)
 
-"""### K-Nearest Neighbor"""
+"""### K-Nearest Neighbor
+
+### Import library-library yang diperlukan, membuat, melatih, menguji dan mencari akurasi model KNN:
+"""
 
 from sklearn.neighbors import KNeighborsClassifier
 model2 = KNeighborsClassifier(n_neighbors=3)
@@ -112,13 +163,18 @@ y_pred = model2.predict(X_test)
 Akurasi_KNN=accuracy_score(y_test,y_pred)
 print(Akurasi_KNN)
 
-"""## Deep Learning"""
+"""## Deep Learning
+
+### Import library-library yang diperlukan:
+"""
 
 import tensorflow
 from tensorflow import keras
 from keras.models import Sequential
 from keras.layers import Dense,Dropout
 from keras.callbacks import EarlyStopping
+
+"""### Membuat model deep learning:"""
 
 model3 = Sequential()
 model3.add(Dense(128,activation = 'relu',input_dim =(22) ))
@@ -128,16 +184,26 @@ model3.add(Dropout(0.2))
 model3.add(Dense(1,activation='sigmoid'))
 model3.summary()
 
+"""### Kompilasi deep learning dan membuat sistem early stopping:"""
+
 model3.compile(loss='binary_crossentropy',optimizer='adam',metrics=['accuracy'])
 early_stopping = EarlyStopping(monitor='val_loss',
                                patience=5,
                                restore_best_weights=True)
 
+"""### Melatih deep learning dengan 100 epoch dan menggunakan early stopping:"""
+
 history = model3.fit(X_train,y_train,validation_data=(X_test,y_test),batch_size=32,epochs=100,verbose=True,callbacks=[early_stopping])
+
+"""### Menguji model deep learning:"""
 
 y_pred = model3.predict(X_test)
 
+"""### Konversi nilai prediksi menjadi 1 jika lebih besar dari 0,7 dan menjadi nol jika sebaliknya:"""
+
 y_pred = np.where(y_pred > 0.7,1,0)
+
+"""### Menghitung akurasi model deep learning:"""
 
 Akurasi_DL=accuracy_score(y_test,y_pred)
 print(Akurasi_DL)
@@ -145,17 +211,24 @@ print(Akurasi_DL)
 """## Evaluation
 
 ### Evaluasi Deep Learning
+
+### Menghitung loss training dan validasi model deep learning:
 """
 
 val_loss = history.history['val_loss']
 loss = history.history['loss']
+
+"""### Pada tahapan berikutnya, dilakukan impor library-library yang diperlukan, dan gambar loss pelatihan dan validasi dibuat:"""
 
 import matplotlib.pyplot as plt
 sns.lineplot(x=range(len(val_loss)), y=val_loss, label='Validation Loss')
 sns.lineplot(x=range(len(loss)), y=loss, label='Training Loss')
 plt.legend()
 
-"""### Perbandingan akurasi ketiga model"""
+"""### Perbandingan akurasi ketiga model
+
+### Menampilkan akuran model Logistic Regression, KNN dan deep learning:
+"""
 
 print(f'Akurasi Logistic Regression: {Akurasi_LR}')
 print(f'Akurasi KNN: {Akurasi_KNN}')
