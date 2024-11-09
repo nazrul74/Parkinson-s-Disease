@@ -7,14 +7,13 @@ Penyakit Parkinson merupakan penyakit gangguan otak yang menyebabkan gerakan yan
 > ## Business Understanding
 
 ### Problem Statements
-Permasalahan pada proyek ini adalah bagaimana merancang sistem deteksi penyakit Parkinson secara dini menggunakan biomarker vokal.
+Permasalahan pada proyek ini adalah bagimana melakukan prediksi penyakit Parkinson secara dini menggunakan variabel biomarker vokal.
 
 ### Goals
-Berdasarkan pernyataan permasalahan di atas, pada proyek ini akan dirancang sistem deteksi penyakit Parkinson secara dini menggunakan machine learning dan variabel input berupa biomarker vokal.
+Berdasarkan pernyataan permasalahan di atas, goal pada proyek ini adalah melakukan prediksi penyakit Parkinson secara dini menggunakan machine learning dan variabel input berupa biomarker vokal.
 
 ### Solution statements
-Pada proyek ini dirancang model machine learning menggunakan logistic regression, K-Nearest Neighbor dan Deep Learning.
-Akurasi ketiga model machine learning akan dibandingkan.
+Pada proyek ini dirancang model logistic regression, K-Nearest Neighbor dan Deep Learning untuk melakukan prediksi penyakit Parkinson secara dini menggunakan machine learning dan variabel input berupa biomarker vokal. Akurasi ketiga model machine learning tersebut akan dibandingkan.
 
 > ## Data Understanding
 Dataset yang digunakan berasal dari kaggle di link [Parkinson's Disease](https://www.kaggle.com/datasets/shreyadutta1116/parkinsons-disease/data).
@@ -77,10 +76,19 @@ Hasil cross correlation masing-masing variabel ditampilkan pada gambar berikut:
 > ## Data Preparation
 Teknik data preparation yang dilakukan:
 1. Dropping kolom pertama dari dataset yang bernama "name". Variabel name ini dianggap tidak diperlukan sebagai variabel input untuk memprediksi status penyakit Parkinson tersebut.
-2. Variabel 'status" diedit sehingga jika nilainya lebih besar dari 0,7 diubah menjadi 1. Jika kurang atau sama dengan 0,7 diubah menjadi 0. Konversi angka ini untuk memastikan mana yang terindikasi memiliki penyakit Parkinson, dan mana yang tidak.
+
+```
+df.drop('name',axis = 1,inplace = True)
+```
+
+2. Variabel 'status" diedit sehingga jika nilainya lebih besar dari 0,7 diubah menjadi 1. Jika kurang atau sama dengan 0,7 diubah menjadi 0. Konversi angka ini untuk memastikan mana yang terindikasi memiliki penyakit Parkinson, dan mana yang tidak. Hasil konversi ini kemudian ditampilkan sebanyak 100 data secara acak.
+
+```
+df.status = np.where(df.status>0.7,1,0)
+df.sample(100)
+```
+
 3. Menghitung jumlah data hilang. Jumlah data hilang ini perlu diketahui untuk kemudian dapat dilakukan preparation tertentu pada data tersebut, misalkan menghapus baris data tersebut.
-4. Membuat data variabel input yang merupakan data asli dikurangin variabel 'status', sedangkan variabel 'status' menjadi variabel output. Hal ini dilakukan untuk memastikan mana variabel yang akan menjadi input maupun output baik untuk pelatihan maupun untuk evaluasi model machine learning.
-5. Variabel input machine learning distandarisasi. Standarisasi ini dilakukan agar nilai maksimum dan minimum dari variabel-variabel yang digunakan tidak terlalu beda besarnya. 
 
 
 Informasi data hilang (***missing value***) yang terdapat pada dataset ini ditampilkan pada gambar berikut. 
@@ -90,14 +98,31 @@ Informasi data hilang (***missing value***) yang terdapat pada dataset ini ditam
 
 Gambar tersebut menunjukkan bahwa tidak ada data hilang di dataset yang digunakan. 
 
-> ## Modeling
-Pada proyek ini digunakan tiga jenis machine learning, yaitu logistic regression, K-Nearest Neighbor dan Deep Learning.
+4. Membuat data variabel input yang merupakan data asli dikurangin variabel 'status', sedangkan variabel 'status' menjadi variabel output. Hal ini dilakukan untuk memastikan mana variabel yang akan menjadi input maupun output baik untuk pelatihan maupun untuk evaluasi model machine learning.
 
-- Pemisahan data training dan data pengujian:
+```
+X = df.drop('status',axis =1).values
+y = df.status.values
+```
+
+5. Variabel input machine learning distandarisasi. Standarisasi ini dilakukan agar nilai maksimum dan minimum dari variabel-variabel yang digunakan tidak terlalu beda besarnya.
+
+```
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+sc = StandardScaler()
+X_scalled = sc.fit_transform(X)
+```
+
+6. Memisahkan antara data pelatihan dan data pengujian
 
 ```
 X_train,X_test,y_train,y_test = train_test_split(X_scalled,y,test_size=0.3,random_state=1)
 ```
+
+
+> ## Modeling
+Pada proyek ini digunakan tiga jenis machine learning, yaitu logistic regression, K-Nearest Neighbor dan Deep Learning.
 
 - Model prediksi dengan algoritma logistic regression:
 
