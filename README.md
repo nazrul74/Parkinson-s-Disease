@@ -124,7 +124,7 @@ X_train,X_test,y_train,y_test = train_test_split(X_scalled,y,test_size=0.3,rando
 > ## Modeling
 Pada proyek ini digunakan tiga jenis machine learning, yaitu logistic regression, K-Nearest Neighbor dan Deep Learning.
 
-- Model prediksi dengan algoritma logistic regression:
+- Model prediksi dengan algoritma logistic regression. Untuk membuat model logistic regression, perlu impor terlebih dahulu library-library yang diperlukan. Kemudian logistic regression dibentuk, dilatih, kemudian diuji. Pada proyek ini digunakan penalty = L2. Nilai lain yang bisa dicoba antara lain adalah L1 atau elasticnet (kedua penalty L1 dan L2 ditambahkan).
 
 ```
 from sklearn.linear_model import LogisticRegression
@@ -133,7 +133,7 @@ lr.fit(X_train,y_train)
 y_pred = lr.predict(X_test)
 ```
 
-- Model prediksi dengan algoritma KNN:
+- Model prediksi dengan algoritma KNN. Pertama-tama dilakukan impor library KNeighborsClassifier dari sklearn.neighbors. Kemudian model KNN dibuat, dilatih dan diuji. KNN bekerja dengan membandingkan jarak antara satu sampel dengan sampel pelatihan lainnya dengan memilih sejumlah k tetangga terdekat. Pada proyek ini digunakan k sebesar 3. 
 
 ```
 from sklearn.neighbors import KNeighborsClassifier
@@ -142,7 +142,7 @@ model2.fit(X_train,y_train)
 y_pred = model2.predict(X_test)
 ```
 
-- Model prediksi dengan algoritma Deep Learning:
+- Model prediksi dengan algoritma Deep Learning. Sebelum membuat deep learning, terlebih dahulu dilakukan impor library-library yang diperlukan. Kemudian deep learning dibentuk dengan 128 buah neuron di lapisan masukan, dan 1 neuron di lapisan keluaran. Selain itu digunakan juga lapisan Dropout. Pada proyek ini digunakan loss berupa 'binary crossentropy, optimizer adam dan metrik berupa akurasi. Pelatihan deep learning ini dilakukan dengan early stopping dan 100 epochs dan 32 ukuran batch. Kemudian deep learning diuji.
 
 ```
 import tensorflow
@@ -168,13 +168,27 @@ y_pred = model3.predict(X_test)
 ```
 
 > ## Evaluation
-Pada proyek ini, digunakan nilai akurasi untuk membandingkan unjuk kerja ketiga model machine learning yang digunakan. Pada proyek ini, ditampilkan juga nilai loss training maupun validasi dari model deep learning seperti pada gambar berikut. Gambar tersebut memperlihatkan bahwa training model deep learning telah berjalan dengan baik.
+Pada proyek ini, digunakan nilai akurasi untuk membandingkan unjuk kerja ketiga model machine learning yang digunakan. Ditampilkan juga nilai loss training maupun validasi dari model deep learning seperti pada gambar berikut. Gambar tersebut memperlihatkan bahwa training model deep learning telah berjalan dengan baik.
 
 <p align="center">
   <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/loss-dl.png?raw=true"/>
 </p>
 
-Dari hasil experiment pada proyek ini, diperoleh bahwa deep learning berhasil mencapat nilai akurasi tertinggi yaitu sebesar 93,59%, diikuti oleh KNN dan logistic regression, masing-masing sebesar 92,20% dan 91,36% seperti yang ditunjukkan pada tabel berikut.
+Metrik yang digunakan pada evaluasi proyek ini adalah berupa nilai akurasi. Akurasi merupakan rasio prediksi benar (positif dan negatif) terhadap keseluruhan data.
+
+Akurasi = (TP+TN) / (TP+FP+FN+TN)
+
+di mana, 
+- TP : True Positif,
+- TN : True Negatif
+- FP : False Positif
+- FN : False Negatif
+
+Gambar berikut menjelaskan posisi keempat kelompok (TP, TN, FP dan FN) tersebut [Understanding Confusion Matrix](https://towardsdatascience.com/understanding-confusion-matrix-a9ad42dcfd62).
+<p align="center">
+  <img src="https://github.com/nazrul74/Parkinson-s-Disease/blob/main/img/confusion-matrix.JPG?raw=true"/>
+</p>
+Dari hasil experiment pada proyek ini, diperoleh bahwa deep learning berhasil mencapai nilai akurasi tertinggi yaitu sebesar 93,59%, diikuti oleh KNN dan logistic regression, masing-masing sebesar 92,20% dan 91,36% seperti yang ditunjukkan pada tabel berikut.
 
 | No | Model | Akurasi (%) |
 | --- | --- | --- |
@@ -182,4 +196,4 @@ Dari hasil experiment pada proyek ini, diperoleh bahwa deep learning berhasil me
 | 2 | KNN | 92,20 |
 | 3 | deep learning | 93,59 |
 
-
+Eksperiment pada projek ini berhasil menjawab problem statement di atas untuk memprediksi penyakit Parkinson secara dini menggunakan variabel biomarker vokal. Goal yang diharapkan juga berhasil dicapai. Solution statement yang direncanakan berhasil diwujudkan dengan terbentuknya machine learning dengan akurasi maksimum 93,59%.
